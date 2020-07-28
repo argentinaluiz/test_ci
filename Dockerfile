@@ -1,6 +1,6 @@
 FROM php:7.3.6-fpm-alpine3.9
 
-RUN apk add --no-cache shadown \
+RUN apk add --no-cache shadow \
             openssl \
             bash \
             mysql-client \
