@@ -18,9 +18,9 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
-#RUN usermod -u 1000 www-data
+RUN usermod -u 1000 www-data
 
-RUN chown -R www-data:www-data /var/www
+RUN chown -R $USER:www-data /var/www
 
 WORKDIR /var/www
 RUN rm -rf /var/www/html
