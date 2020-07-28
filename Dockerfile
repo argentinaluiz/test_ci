@@ -20,8 +20,6 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 
 RUN usermod -u 1000 www-data
 
-RUN chown -R $USER:www-data /var/www
-
 WORKDIR /var/www
 RUN rm -rf /var/www/html
 
