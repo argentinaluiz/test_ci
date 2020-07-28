@@ -6,7 +6,7 @@ steps:
 
     -   id: "Permissão nas pastas"
         name: 'gcr.io/cloud-builders/docker'
-        args: ['exec','-t','app','-u','root','chown','-R','www-data:www-data','/var/www']
+        args: ['exec','-u','root','-t','app','chown','-R','www-data:www-data','/var/www']
 
     -   id: "Rodando composer"
         name: 'gcr.io/cloud-builders/docker'
